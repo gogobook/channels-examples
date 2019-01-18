@@ -196,6 +196,6 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
         )
 
 class TaskConsumer(AsyncConsumer):
-    async def test_print(self, message):
+    async def test_print(self, event):
         await asyncio.sleep(1)
-        print(f'Task: {message}')
+        print(f'Task: {event}')
