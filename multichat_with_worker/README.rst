@@ -45,15 +45,15 @@ Run the app::
 
 The app will now be running on: {your-docker-ip}:8000
 
-Run the worker process::
-
-    docker-compose run --rm web python manage.py runworker task-impl
-
 **Note:** You will need to prefix any ``python manage.py`` commands with: ``docker-compose run --rm web``. e.g.: ``docker-compose run --rm web python manage.py createsuperuser``
 
-Finally, run::
+Run::
 
     docker-compose run --rm web python manage.py migrate
+
+Finally, run the worker process::
+
+    docker-compose run --rm web python manage.py runworker task-impl
 
 
 Usage
